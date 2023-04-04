@@ -1,0 +1,70 @@
+# Online-Streaming-Platform-STREAMNATION
+This is a platform where user can share content,view video content and read books.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+      /* Add your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <form id="payment-form">
+      <div>
+        <label>
+          Card Number
+          <input id="card-number" name="cardNumber" type="text" placeholder="** ** ** **">
+        </label>
+      </div>
+      <div>
+        <label>
+          Expiry Month
+          <input id="card-exp-month" name="cardExpMonth" type="text" placeholder="MM">
+        </label>
+        <label>
+          Expiry Year
+          <input id="card-exp-year" name="cardExpYear" type="text" placeholder="YY">
+        </label>
+        <label>
+          CVC
+          <input id="card-cvc" name="cardCvc" type="text" placeholder="*">
+        </label>
+      </div>
+      <button type="submit">Pay</button>
+    </form>
+    <script>
+      var stripe = Stripe('YOUR_PUBLISHABLE_KEY_HERE');
+      var elements = stripe.elements();
+      var cardNumberElement = elements.create('cardNumber');
+      cardNumberElement.mount('#card-number');
+      var cardExpiryElement = elements.create('cardExpiry');
+      cardExpiryElement.mount('#card-expiry');
+      [10:58, 4/4/2023] Soumyadeep Das:       var cardCvcElement = elements.create('cardCvc');
+      cardCvcElement.mount('#card-cvc');
+      var form = document.getElementById('payment-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        stripe.createToken(cardNumberElement).then(function(result) {
+          if (result.error) {
+            // Inform the user if there was an error
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+          } else {
+            // Send the token to your server
+            var tokenElement = document.createElement('input');
+            tokenElement.setAttribute('type', 'hidden');
+            tokenElement.setAttribute('name', 'stripeToken');
+            tokenElement.setAttribute('value', result.token.id);
+            form.appendChild(tokenElement);
+            form.submit();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+
+
