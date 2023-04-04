@@ -1,0 +1,63 @@
+# Online-Streaming-Platform-STREAMNATION
+This is a platform where user can share content,view video content and read books.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    
+      
+
+    <form method="post" action="/login">
+      <label>Username:</label>
+      <input type="text" name="username" required><br>
+      <label>Password:</label>
+      <input type="password" name="password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Welcome, {{ username }}!</h1>
+    <a href="/logout">Logout</a>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STREAMNATION</title>
+  </head>
+  <body>
+    <h1>Welcome to the Streaming Platform</h1>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STREAMNATION</title>
+  </head>
+  <body>
+    <h1>Welcome to the STREAMNATION</h1>
+    <a href="/register">Register</a>
+    
+    <a href = "sharer.html">get started</a>
+    <a href="log.html">get started</a>
+  </body>
+</html>
+
+
+
+
+
+
+
+    
