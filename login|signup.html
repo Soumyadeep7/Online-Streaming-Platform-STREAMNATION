@@ -1,0 +1,57 @@
+//# Online-Streaming-Platform-STREAMNATION//
+//This is a platform where user can share content,view video content and read books.//
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | STREAMNATION</title>
+    <link rel="stylesheet" href="ST.CSS">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Videos</a>
+        <a href="#">Books</a>
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+      </nav>
+      <h1>STREAMNATION</h1>
+      <p>Watch the latest videos and subscribe to your favorite channels.</p>
+      <form action="#" method="get">
+        <input type="text" name="search" placeholder="Search videos">
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <section>
+        <h2>Featured Videos</h2>
+        <div class="video-container">
+          <!-- Featured videos go here -->
+        </div>
+      </section>
+      <section>
+        <h2>Latest Videos</h2>
+        <div class="video-container">
+          <!-- Latest videos go here -->
+        </div>
+    </section>
+    <section>
+      <h2>Upload a Video</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="video-title">Title</label>
+        <input type="text" id="video-title" name="title" required>
+        <label for="video-description">Description</label>
+        <textarea id="video-description" name="description"></textarea>
+        <label for="video-file">Choose a video file to upload</label>
+        <input type="file" id="video-file" name="video" accept="video/*" required>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+</main>
+<footer>
+  <p>&copy; STREAMNATION 2023</p>
+</footer>
+</body>
+</html>
