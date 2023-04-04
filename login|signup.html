@@ -1,0 +1,92 @@
+# Online-Streaming-Platform-STREAMNATION
+This is a platform where user can share content,view video content and read books.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StreamNation - Login or Sign up</title>
+	<link rel="stylesheet" type="text/css" href="ST.CSS">
+</head>
+<body>
+	<div class="login-container">
+		<form>
+			<h1>Login</h1>
+			<label for="email"><b>Email</b></label>
+			<input type="email" placeholder="Enter Email" name="email" required>
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+			<button type="submit"></button>
+			<a href="BOOK.html" class="btn">login</a>
+			<a href="video.html" class="btn">
+				
+
+
+			</a>
+
+			
+			
+
+		</form>
+		<form>
+			<h1>Sign up</h1>
+			<label for="fullname"><b>Full Name</b></label>
+			<input type="text" placeholder="Enter Full Name" name="fullname" required>
+			<label for="email"><b>Email</b></label>
+			<input type="email" placeholder="Enter Email" name="email" required>
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+			<button type="submit"></button>
+			<a href="BOOK.html" class="btn">signup</a>
+			<a href="video.html" class="btn">
+
+		</form>
+        <p>Already have an account? <a href="#">Login here</a>.</p>
+	</div>
+	<script>
+		// js code here//
+		// get the login form and add an event listener for when it's submitted//
+		var loginform = document.querySelector('.login-container form:first -of-type');
+		loginform.addEventListener('submit',function(event) {
+			event.preventDefault(); // prevent the form from submitting//
+			// get the email and password fields //
+			var emailfield = loginform.querySelector('input[type="email"]');
+			var passwordField = loginform.querySelector('input[type= "password"]');
+			// Validate the email and password fields//
+			if (emailfield.value ===''||passwordField.value=''){
+				alert("please enter your email and password.");
+				return;
+			}
+			//if the fields are valid then redirect to this page//
+			window.location.replace('video.html');
+			window.location.replace('BOOK.html');
+			// if the fields are valid submit the form
+			loginform.submit();
+		});
+		// get the signup form and add an event listener for when it's submitted//
+		var signupform = document.querySelector('.login-container form:last-of-type');
+		signupform.addEventListener('submit',function(event){
+			// get the full name,email id,password//
+			var fullnamefield =signupform.querySelector('input[name="fullname"]');
+			var emailfield = signupform.querySelector('input[type="email"]');
+			var passwordField = signupform.querySelector('input[type= "password"]');
+			// Validate fields//
+			if (fullnamefield.value ===''||emailField.value=''|| passwordField===''){
+				alert("please enter your name, email and password.");//display an error message
+				return;
+
+
+		}
+		// if the fields are valid submit the form
+
+		window.location.replace('video.html');
+			window.location.replace('BOOK.html');
+
+					// if the fields are valid submit the form
+					signupform.submit();
+	});
+
+
+
+	</script>
+</body>
+</html>
+
