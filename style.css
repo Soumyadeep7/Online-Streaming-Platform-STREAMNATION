@@ -1,0 +1,78 @@
+# Online-Streaming-Platform-STREAMNATION
+This is a platform where user can share content,view video content and read books.
+body {
+    color: #0B3C5D;
+  }
+/* Header section styles */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+nav a {
+  color:crimson;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+  color: #ff6600;
+}
+h1 {
+  font-size: 3rem;
+  margin-top: 50px;
+}
+p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+button[type="search"] {
+    background-color: #ff2b2b;
+    color: red;
+  }
+.btn:hover {
+  background-color: #333;
+  color:crimson;
+}
+
+/* Main section styles */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+section {
+  margin-bottom: 50px;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}  
